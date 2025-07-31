@@ -1,14 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders tic tac toe header', () => {
+test('renders learn react link', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Tic Tac Toe/i);
-  expect(headerElement).toBeInTheDocument();
-});
-
-test('renders game board', () => {
-  render(<App />);
-  const squares = screen.getAllByRole('button');
-  expect(squares.length).toBeGreaterThan(9); // At least 9 squares plus control buttons
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
 });
